@@ -1,0 +1,37 @@
+<p>reactive-forms works!</p>
+<form [formGroup] = "profileForm" (submit) = "onFormSubmit()">
+    <label>firstName</label>
+    <input type="text" formControlName="firstName">
+    <br />
+    <label>lastName</label>
+    <input type="text" formControlName="lastName">
+    <br />
+    <label>email</label>
+    <input type="text" formControlName="email">
+    <br />
+    <button type="submit">submit</button>
+</form>
+<div #viewChild>Example for viewChild</div>
+<div #viewChild>Example for viewVhildren</div>
+<p>value from subject -- {{valueFromSubject}}</p>
+
+<p>
+    <button (click) = "inc()">Increment</button>
+    <button (click) = "dec()">Decrement</button>
+</p>
+
+<app-child #childView></app-child>
+<div class="row">
+    <div class="col-md-6">
+        <app-product-widget [products] = "products">
+            <h3 class="header">Up to 70% off | clearance sale</h3>
+            <a href="" class="link">Visit store</a>
+        </app-product-widget>
+    </div>
+    <div class="col-md-6">
+        <app-product-widget [products] = "topProducts">
+            <h3 class="header">Top Picks of the day</h3>
+            <a href="" class="link">Visit store</a>
+        </app-product-widget>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<p>product-widget works!</p>
+<ng-content select=".header"></ng-content>
+<ul class="list-group"  *ngFor= "let product of products">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+       {{product.name}} -- {{product.price}}
+        <span class="badge badge-primary badge-pill bg-primary">{{product.price}}</span>
+    </li>
+</ul>
+<ng-content select=".link"></ng-content>

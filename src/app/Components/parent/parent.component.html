@@ -1,0 +1,35 @@
+<p>parent works!</p>
+<!-- double curly braces syntax is known as interpolation -->
+<p class="text-success">{{name}}</p>
+<!-- classbinding -->
+<p [class.text-danger] = '!hasError'>{{name}}</p>
+<!-- <p [ngClass] = "messageStyles">{{name}}</p> -->
+
+<!-- we can do mathematical operations and string concatenations in ainterpolation -->
+<p>{{2+2}}</p>
+<p>{{'welcome ' + name}}</p>
+<!-- we can also use JS methods -->
+<p>{{name.length}}</p>
+<p>{{name.toUpperCase()}}</p>
+<p>{{greetUser()}}</p>
+<!-- <p>{{a = 2+2}}</p> -- cannot do assignment operations -->
+<!-- <p>{{window.location.href()}}</p> -- cannot access JS properties -->
+
+<!-- *********************************Event Binding*************************************************** -->
+<!-- *********************************Event Binding*************************************************** -->
+<!-- *********************************Event Binding*************************************************** -->
+<button (click) = onClick($event)>click</button>
+{{greet}}
+
+<!-- !-- *********************************Template Reference variables*************************** -->
+<input #myInput type="text" />
+<button (click) = "logMessage(myInput.value)">Log</button>
+
+<!-- !-- *********************************Two way data binding*************************** -->
+<input [(ngModel)] = "inputValue" type="text" />
+{{inputValue}}
+{{parentData}}
+<!-- {{message}} -->
+<button (click) = 'fireEvent()'>send data to parent</button>
+
+
